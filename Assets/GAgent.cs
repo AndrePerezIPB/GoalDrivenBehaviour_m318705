@@ -20,7 +20,7 @@ public class GAgent : MonoBehaviour
     public List<GAction> actions = new List<GAction>();
     public Dictionary<SubGoal, int> goals = new Dictionary<SubGoal, int>();
 
-    GPplanner planner;
+    GPlanner planner;
     Queue<GAction> actionQueue;
     public GAction currentAction;
     SubGoal currentGoal;
@@ -37,7 +37,7 @@ public class GAgent : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         
     }
