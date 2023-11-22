@@ -20,6 +20,7 @@ public abstract class GAction : MonoBehaviour
     public WorldStates agentBeliefs;
 
     public GInventory inventory;
+    public WorldStates beliefs;
 
     //So when we are perfoming an action we don't want to start another action
     public bool running = false;
@@ -51,6 +52,7 @@ public abstract class GAction : MonoBehaviour
         }
 
         inventory = this.GetComponent<GAgent>().inventory;
+        beliefs = this.GetComponent<GAgent>().beliefs;
     }
 
     public bool IsAchievable()
