@@ -2823,6 +2823,7 @@ GameObject:
   - component: {fileID: 4318989295530821259}
   - component: {fileID: 4629958916301324968}
   - component: {fileID: 2922491156699823549}
+  - component: {fileID: 9187755330073600296}
   m_Layer: 0
   m_Name: Patient
   m_TagString: Untagged
@@ -2955,6 +2956,19 @@ MonoBehaviour:
     value: 0
   agent: {fileID: 0}
   running: 0
+--- !u!114 &9187755330073600296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881807149238628900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109ec99063100c74dbea5e9a85247b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisAgent: {fileID: 16781286540425362}
 --- !u!1 &7927236269272520591
 GameObject:
   m_ObjectHideFlags: 0

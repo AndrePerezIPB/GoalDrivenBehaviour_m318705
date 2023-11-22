@@ -2823,6 +2823,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4629958916301324968, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
+      propertyPath: duration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.117225
@@ -2866,10 +2870,6 @@ PrefabInstance:
     - target: {fileID: 7881807149238628900, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
       propertyPath: m_Name
       value: Patient
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881807149238628900, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3778,9 +3778,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1592830986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e82013e5ee894d90b1e90f3cbcdf92f, type: 3}
+  m_Script: {fileID: 11500000, guid: b4eae549f366a1e4ea51606065e978c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  states: {fileID: 1592830989}
 --- !u!114 &1592830989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4506,6 +4507,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2618188073631541129, guid: 51e437be22296b340954bf6591a60065, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2142475107}
+    - targetCorrespondingSourceObject: {fileID: 2618188073631541129, guid: 51e437be22296b340954bf6591a60065, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142475110}
+    - targetCorrespondingSourceObject: {fileID: 2618188073631541129, guid: 51e437be22296b340954bf6591a60065, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142475109}
   m_SourcePrefab: {fileID: 100100000, guid: 51e437be22296b340954bf6591a60065, type: 3}
 --- !u!1 &2142475106 stripped
 GameObject:
@@ -4534,6 +4541,45 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2142475109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142475106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87cbc20971405b4eb52859584cef6c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GetPatient
+  cost: 1
+  target: {fileID: 1000317771}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: Waiting
+    value: 0
+  afterEffects:
+  - key: treatPatient
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2142475110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142475106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9eb7fb7846ba114bac8c4b58a66fa20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
 --- !u!1 &2146182846
 GameObject:
   m_ObjectHideFlags: 0
