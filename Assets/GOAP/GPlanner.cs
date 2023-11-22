@@ -19,7 +19,7 @@ public class Node
     }
 }
 
-public class GPlanner : MonoBehaviour
+public class GPlanner
 {
     public Queue<GAction> Plan(List<GAction> actions, Dictionary<string, int> goal, WorldStates states)
     {
