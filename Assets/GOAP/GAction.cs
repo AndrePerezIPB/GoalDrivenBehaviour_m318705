@@ -19,6 +19,8 @@ public abstract class GAction : MonoBehaviour
 
     public WorldStates agentBeliefs;
 
+    public GInventory inventory;
+
     //So when we are perfoming an action we don't want to start another action
     public bool running = false;
 
@@ -47,6 +49,8 @@ public abstract class GAction : MonoBehaviour
                 effects.Add(w.key, w.value);
             }
         }
+
+        inventory = this.GetComponent<GAgent>().inventory;
     }
 
     public bool IsAchievable()
